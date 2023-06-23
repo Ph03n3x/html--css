@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 500px;
+            position: relative;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: 0px;
+            background-color: rgba(51, 47, 47, 0.934);;
+        }
+        caption{
+            font-size: 1.5em;
+            background-color: lightgray;
+            padding: 5px;
+            font-weight: bold;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        tbody > tr:nth-child(even){
+            background-color: lightgrey; /*2n-1*/
+        }
+        tbody > tr:nth-child(odd){
+            background-color: white;/*2n*/
+        }
+       
+        td , th{
+            border: 1px solid black;
+            padding: 8px;
+            border-collapse: collapse;
+        }
+        thead , tfoot{
+            background-color: rgba(51, 47, 47, 0.934);
+            color: white;
+            text-shadow: 1px 1px 0px 0px black;
+        }
+        td.num{
+            text-align: right;
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Uso de Tabelas Grandes</h1>
     <!--
         ANATOMIA DE TABELAS GRANDES
         TABLE
+           CAPTION 
             THEAD
                 TR,TD,TH    
             TBODY
@@ -21,120 +64,126 @@
 <table>
     <thead>
         <tr>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
         </tr>
     </thead>
+    <caption>População das Unidades Federativas</caption>
     <tbody>
         <tr>
             <td>São Paulo</td>
-            <td>41 262 199</td>
+            <td class="num">41 262 199</td>
         </tr>
         <tr>
             <td>Minas Gerais</td>
-            <td>19 597 330</td>
+            <td class="num">19 597 330</td>
         </tr>
         <tr>
             <td>Rio de Janeiro</td>
-            <td>15 989 929</td>
+            <td class="num">15 989 929</td>
         </tr>
         <tr>
             <td>Bahia</td>
-            <td>14 016 906</td>
+            <td class="num">14 016 906</td>
         </tr>
         <tr>
             <td>Paraná</td>
-            <td>10 444 526</td>
+            <td class="num">10 444 526</td>
         </tr>
         <tr>
             <td>Rio Grande do Sul</td>
-            <td>10 693 929</td>
+            <td class="num">10 693 929</td>
         </tr>
         <tr>
             <td>Pernambuco</td>
-            <td>8 796 448</td>
+            <td class="num">8 796 448</td>
         </tr>
         <tr>
             <td>Ceará</td>
-            <td>8 452 381</td>
+            <td class="num">8 452 381</td>
         </tr>
         <tr>
             <td>Pará</td>
-            <td>7 581 051</td>
+            <td class="num">7 581 051</td>
         </tr>
         <tr>
             <td>Santa Catarina</td>
-            <td>6 248 436</td>
+            <td class="num">6 248 436</td>
         </tr>
         <tr>
-            <td> Goiás	6 003 788	</td>
-            <td></td>
+            <td>Goiás</td>
+            <td class="num">6 003 788</td>
         </tr>
         <tr>
-            <td> Maranhão	6 574 789</td>
-            <td></td>
+            <td>Maranhão</td>
+            <td class="num">6 574 789</td>
         </tr>
         <tr>
-            <td> Espírito Santo	3 514 952</td>
-            <td></td>
+            <td>Espírito Santo</td>
+            <td class="num">3 514 952</td>
         </tr>
         <tr>
-            <td> Paraíba	3 766 528	</td>
-            <td></td>
+            <td>Paraíba</td>
+            <td class="num">3 766 528</td>
         </tr>
         <tr>
-            <td>Amazonas	3 483 985</td>
-            <td></td>
+            <td>Amazonas</td>
+            <td class="num">3 483 985</td>
         </tr>
         <tr>
-            <td> Mato Grosso	3 035 122	</td>
-            <td></td>
+            <td>Mato Grosso</td>
+            <td class="num">3 035 122</td>
         </tr>
         <tr>
-            <td> Rio Grande do Norte	3 168 027</td>
-            <td></td>
+            <td>Rio Grande do Norte</td>
+            <td class="num">3 168 027</td>
         </tr>
         <tr>
-            <td> Piauí	3 118 360</td>
-            <td></td>
+            <td>Piauí</td>
+            <td class="num">3 118 360</td>
         </tr>
         <tr>
-            <td> Alagoas	3 120 494</td>
-            <td></td>
+            <td>Alagoas</td>
+            <td class="num">3 120 494</td>
         </tr>
         <tr>
-            <td>Distrito Federal	2 570 160</td>
-            <td></td>
+            <td>Distrito Federal</td>
+            <td class="num">2 570 160</td>
         </tr>
         <tr>
-            <td> Mato Grosso do Sul	2 449 024</td>
-            <td></td>
+            <td>Mato Grosso do Sul</td>
+            <td class="num">2 449 024</td>
         </tr>
         <tr>
-            <td>Sergipe	2 068 017</td>
-            <td></td>
+            <td>Sergipe</td>
+            <td class="num">2 068 017</td>
         </tr>
         <tr>
-            <td>Rondônia	1 562 409</td>
-            <td></td>
+            <td>Rondônia</td>
+            <td class="num">1 562 409</td>
         </tr>
         <tr>
-            <td> Tocantins	1 383 445	</td>
-            <td></td>
+            <td>Tocantins</td>
+            <td class="num">1 383 445</td>
         </tr>
         <tr>
-            <td>Acre	733 559</td>
-            <td></td>
+            <td>Acre</td>
+            <td class="num">733 559</td>
         </tr>
         <tr>
-            <td>Amapá	669 526</td>
-            <td></td>
+            <td>Amapá</td>
+            <td class="num">669 526</td>
         </tr>
         <tr>
-            <td>Roraima	450 479</td>
-            <td></td>
+            <td>Roraima</td>
+            <td class="num">450 479</td>
         </tr>
     </tbody>
-    <tfoot></tfoot>
+    <tfoot>
+        <tr>
+            <th scope="row" >Total de habitantes</td>
+            <td class="num"><strong>210.147.125</strong></td>
+        </tr>
+    </tfoot>
 </table>
 </html>
