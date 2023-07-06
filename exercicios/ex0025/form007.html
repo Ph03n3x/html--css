@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+<form action="cadastro.php" method="post" autocomplete="on">
+<label for="iest">Estado</label>
+<select name="estado" id="iest">
+    <option value="escolha" select>--Choose--</option>
+    <optgroup label="Rios Grandes">
+        <option value="RS">Rio Grande Do Sul</option>
+        <option value="RN">Rio Grande Do Norte</option>
+        <option value="RO">Rio Grande Do OESTE</option>
+        <option value="RL">Rio Grande Do LESTE</option>
+        <option value="RB">Rio Grande Do BAIXO</option>
+        <option value="RC">Rio Grande Do Cima</option>
+    </optgroup>
+
+
+    <optgroup label="Região Norte">
+        <option value="RN">Rio Norte</option>
+        <option value="BN">Banco Norte</option>
+        <option value="CN">Cascata Norte</option>
+        <option value="AN">Adamantina do Norte</option>
+        <option value="PN">Piracicaba do Norte</option>
+        <option value="ON">Onda Norte</option>
+        <option value="XN">Xibiu Norte</option>
+        <option value="NN">Norte do Norte</option>
+        <option value="MN">Muito Norte</option>
+    </optgroup>
+</select>
+<p>
+    <label for="iprof">Profissão</label>
+    <input type="text" name="prof" id="iprof" list="listprof" >
+    <datalist id="listprof">
+        <option value="ADM">Adminisrtrador</option>
+        <option value="DEV">Desenvolvedor</option>
+        <option value="PROF">Professor</option>
+        <option value="CONT">Contabilista</option>
+        <option value="MOT">Motorista</option>
+    </datalist>
+</p>
+<p>
+    <label for="imsg">Mensagem</label><br>
+    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+</p>
+<p>
+    <input type="submit" value="Enviar">
+</p>
+
+
+
+
+</form>
+</body>
+</html>
